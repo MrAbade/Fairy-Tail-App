@@ -7,4 +7,4 @@ class Sorcerer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
 
-    guild_id = db.Column(db.Integer, db.ForeignKey('guilds.id'))
+    guild_id = db.Column(db.Integer, db.ForeignKey('guilds.id', onupdate='CASCADE', ondelete='CASCADE'))
