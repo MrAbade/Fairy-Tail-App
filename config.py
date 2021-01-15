@@ -21,7 +21,7 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URI')
     ENV = 'production'
-    # JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')
-    # SECRET_KEY = environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URI')
+    JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')
+    SECRET_KEY = environ.get('SECRET_KEY')
