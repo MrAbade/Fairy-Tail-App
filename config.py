@@ -1,7 +1,7 @@
-from os import environ
+from environs import Env
 from secrets import token_hex
 
-
+env = Env()
 class Config:
     DEBUG = False
     TESTING = False
@@ -22,6 +22,6 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     ENV = 'production'
-    SQLALCHEMY_DATABASE_URI = environ.get('DATABASE_URI')
-    JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')
-    SECRET_KEY = environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URI')
+    JWT_SECRET_KEY = env.str('JWT_SECRET_KEY')
+    SECRET_KEY = env.str('SECRET_KEY')
