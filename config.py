@@ -22,6 +22,6 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     ENV = 'production'
-    SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URI')
+    SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URL')
     JWT_SECRET_KEY = env.str('JWT_SECRET_KEY')
     SECRET_KEY = env.str('SECRET_KEY')
