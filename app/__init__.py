@@ -11,7 +11,7 @@ configs = {
     'test': 'TestingConfig'
 }
 
-def create_app(config='production'):
+def create_app(config='development'):
     app = Flask(__name__)
     app.config.from_object(f'config.{configs[config]}')
 
