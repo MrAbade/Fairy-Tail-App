@@ -6,6 +6,4 @@ class Guild(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
 
-    sorcerer_list = db.relationship('Sorcerer', backref=db.backref(
-        'guild', onupdate='CASCADE', ondelete='CASCADE'))
-
+    sorcerer_list = db.relationship('Sorcerer', backref=db.backref('guild'))
