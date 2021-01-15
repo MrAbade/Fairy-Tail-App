@@ -13,7 +13,6 @@ configs = {
 
 def create_app(config='production'):
     app = Flask(__name__)
-    print(environ.get('SQLALCHEMY_DATABASE_URI'))
     app.config.from_object(f'config.{configs[config]}')
 
     config_database(app)
