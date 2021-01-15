@@ -22,5 +22,5 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = environ.get('POSTGRES_URL')
-    JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')
-    SECRET_KEY = environ.get('SECRET_KEY')
+    # JWT_SECRET_KEY = environ.get('JWT_SECRET_KEY')
+    # SECRET_KEY = environ.get('SECRET_KEY')
